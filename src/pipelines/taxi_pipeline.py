@@ -14,8 +14,8 @@ from constants.taxi_c import (PassengerLimits as pl, GeoBounds as gb,
 from data_io import load_taxi_data
 from features.taxi import create_geo_clusters, create_route_distance, \
   get_jfk_flag, get_lgua
-from src.features import taxi as feat_taxi
-from src.features import utils as feat_utils
+from features import taxi as feat_taxi
+from features import utils as feat_utils
 
 
 def build_taxi_dataset(save_csv: bool = False) -> pd.DataFrame:

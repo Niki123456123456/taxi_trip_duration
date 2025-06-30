@@ -6,7 +6,7 @@ from zipfile import ZipFile
 import pandas as pd
 from kaggle import KaggleApi
 
-from src.constants import taxi_c, weather_c, core_c
+from constants import taxi_c, weather_c, core_c
 
 log = logging.getLogger(__name__)
 

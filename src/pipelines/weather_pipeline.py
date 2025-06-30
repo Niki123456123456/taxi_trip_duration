@@ -9,8 +9,8 @@ import pandas as pd
 from constants import core_c as c, weather_c
 from constants import weather_c as w
 from data_io import load_weather_data
-from src.features import utils as feat_utils
-from src.features import weather as feat_weather
+from features import utils as feat_utils
+from features import weather as feat_weather
 
 log = logging.getLogger(__name__)
 

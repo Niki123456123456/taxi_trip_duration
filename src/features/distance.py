@@ -47,10 +47,11 @@ OSRM_URL = "http://localhost:5001/route/v1/driving/"
 
 
 def osrm_distance_km(pick_lon, pick_lat, drop_lon, drop_lat):
-  url = (f"{OSRM_URL}"
-         f"{pick_lon},{pick_lat};{drop_lon},{drop_lat}"
-         "?overview=false")
-  r = requests.get(url, timeout=2)
-  if r.ok and r.json()["code"] == "Ok":
-    return r.json()["routes"][0]["distance"] / 1000.0  # metres → km
-  return np.nan
+#   url = (f"{OSRM_URL}"
+#          f"{pick_lon},{pick_lat};{drop_lon},{drop_lat}"
+#          "?overview=false")
+#   r = requests.get(url, timeout=2)
+#   if r.ok and r.json()["code"] == "Ok":
+#     return r.json()["routes"][0]["distance"] / 1000.0  # metres → km
+#   return np.nan
+    return haversine(pick_lat, pick_lon, drop_lat, drop_lon)  # metres → km
